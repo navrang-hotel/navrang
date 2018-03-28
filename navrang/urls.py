@@ -19,3 +19,10 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+# Added by developer after this
+from django.urls import include
+
+urlpatterns += [
+    path('base/', include('base.urls')),
+]
