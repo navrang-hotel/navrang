@@ -2,4 +2,5 @@ db.sqlite3
 navrang_env
 navrang/__pycache__
 base/migrations
+base/__pycache__
 

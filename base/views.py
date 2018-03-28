@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 # Added by dev after this
 
-def view(request):
+def index(request):
     """View funciton for index page."""
 
     template = 'base/index.html'
