@@ -1,17 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Navrang Hotel</title>
+    <title>Navrang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
   </head>
   <body>
     <header>
-      <h1>Navrang Hotel, Janakpur</h1>
-      <hr/>
+        <nav class="navbar navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="{% url 'base-index' %}">Navrang</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li {% block navHom %}{% endblock %}><a href="{% url 'base-index' %}">HOME</a></li>
+                <!-- Removing dropdown -->
+                <!--
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">MENU<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">FOODS</a></li>
+                    <li><a href="#">JUICE</a></li>
+                    <li><a href="#">SWEETS</a></li>
+                  </ul>
+                </li>
+                -->
+                <li {% block navMen %}{% endblock %}><a href="{% url 'base-menu' %}">MENU</a></li>
+                <li {% block navOrd %}{% endblock %}><a href="{% url 'base-order' %}">ORDER</a></li>
+                <li {% block navRes %}{% endblock %}><a href="{% url 'base-reservation' %}">RESERVATIONS</a></li>
+                <li {% block navRev %}{% endblock %}><a href="{% url 'base-reviews' %}">REVIEWS</a></li>
+                <li {% block navCon %}{% endblock %}><a href="{% url 'base-contact' %}">CONTACT</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+                <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
+                <li><button class="btn btn-danger navbar-btn"><span class="glyphicon glyphicon-phone"></span> Call: +977 9801185187</button></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
     </header>
+
     <main>
-      {% block content %}
-      {% endblock %}
+      <div class="container">
+        {% block content %}
+        {% endblock %}
+      </div>
     </main>
+
     <footer>
     </footer>
   </body>

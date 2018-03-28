@@ -1,8 +1,138 @@
-{% extends 'base/base_generic.html' %}
+{% extends "base/base_generic.html" %}
+
+{% block navHom %}
+  class="active" 
+{% endblock %}
 
 {% block content %}
-  <div>
-    <p>See you soon</p>
+
+<div class="container">
+  <!--
+  <div class="jumbotron nb-bg-red">
+    <h2 class="text-center nb-fg-white">Navrang Hotel</h2>
   </div>
+  -->
+  <!-- Carousel -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        {% load static %}
+        <img src="{% static 'base/img/ambience-400.jpg'%}" alt="Chania">
+        <div class="carousel-caption">
+          <h1 class="nb-bdr-shd">Navrang Hotel</h1>
+          <p>Just food for you.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="{% static 'base/img/ambience-400.jpg'%}" alt="Chania">
+        <div class="carousel-caption">
+          <h1 class="nb-bdr-shd">Janakpur</h1>
+          <p>Thank you, everyone!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="{% static 'base/img/ambience-400.jpg'%}" alt="Chania">
+        <div class="carousel-caption">
+          <h1 class="nb-bdr-shd">Shiv Chowk</h1>
+          <p>Please visit Janaki Temple.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!-- /Carousel -->
+
+  <br/>
+
+  <!-- Service -->
+  <!--
+  <div class="container-fluid text-center nb-bg-red fg-white">
+    <h2>MENU</h2>
+    <br>
+    <div class="row slideanim">
+      <div class="col-sm-4 nb-bg-red">
+        <span class="glyphicon glyphicon-off logo-small"></span>
+        <h4>Breakfast</h4>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-heart logo-small"></span>
+        <h4>Lunch</h4>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-lock logo-small"></span>
+        <h4>Dinner</h4>
+      </div>
+      </div>
+      <br><br>
+    <div class="row slideanim">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-leaf logo-small"></span>
+        <h4>Snacks</h4>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-certificate logo-small"></span>
+        <h4>Juice</h4>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-wrench logo-small"></span>
+        <h4>Sweets</h4>
+      </div>
+    </div>
+  </div>
+  -->
+  <!-- /Service -->
+
+  <!-- Color line -->
+  <div>
+    <div class="nb-bg-violet nb-sw-2 nb-div-inline">
+      <p>&nbsp; Facebook</p>
+    </div>
+    <div class="nb-bg-indigo nb-sw-2 nb-div-inline">
+      <p>&nbsp; Twitter</p>
+    </div>
+    <div class="nb-bg-blue nb-sw-2 nb-div-inline">
+      <p>&nbsp; Instagram</p>
+    </div>
+    <div class="nb-bg-green nb-sw-2 nb-div-inline">
+      <p>&nbsp; Youtube</p>
+    </div>
+    <div class="nb-bg-yellow nb-sw-2 nb-div-inline">
+      <p>&nbsp; Google</p>
+    </div>
+    <div class="nb-bg-orange nb-sw-2 nb-div-inline">
+      <p>&nbsp; Foods</p>
+    </div>
+    <div class="nb-bg-red nb-sw-2 nb-div-inline">
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  </!-- Color line -->
+  <!-- Filler div -->
+  <div class="jumbotron nb-bg-maroon">
+    <h1 class="text-center nb-fg-white">Opening soon...</h1>
+  </div>
+  <!-- /Filler div -->
+</div>
+
+<!-- Items carausel -->
 {% endblock %}
 

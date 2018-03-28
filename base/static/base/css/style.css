@@ -2,6 +2,173 @@
   box-sizing: border-box;
 }
 
-nb-bb-lgra {
-;
+body {
+  background-color: brown;
+}
+
+main {
+}
+
+.cust-jumbotron-brown {
+  background-color: brown;
+  color: white;
+}
+
+.fg-white {
+  color: white;
+}
+
+.nb-bg-white {
+  background-color: white;
+  color: red;
+}
+
+.nb-bg-white a {
+  color: red;
+  font-weight: bold;
+}
+
+.nb-bg-red {
+  background-color: maroon;
+}
+
+.nb-fg-white {
+  color: white;
+}
+
+.nb-std-link {
+  color: white;
+}
+.nb-std-link:hover {
+  color: white;
+}
+
+.nb-active {
+  background-color: brown;
+  color: white;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar {
+    /*margin-bottom: 0;*/
+    /*background-color: #079;*/
+    background-color: #000;
+    z-index: 9999;
+    border: 0;
+    /*font-size: 12px !important;*/
+    line-height: 1.42857143 !important;
+    letter-spacing: 1px;
+    border-radius: 0;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar-nav li.active a {
+    /*color: #079 !important;*/
+    /*background-color: #068 !important;*/
+    background-color: brown !important;
+}
+.navbar-nav li a:hover {
+    /*color: #079 !important;*/
+    /*background-color: #068 !important;*/
+    background-color: maroon !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.nb-bdr-shd {
+  text-shadow: 5px 0px 2px #000, -5px 0px 2px #000,
+               0px 5px 2px #000, 0px -5px 2px #000; 
+}
+
+.nb-bg-violet {
+  background-color: violet;
+  color: green;
+}
+.nb-bg-indigo {
+  background-color: indigo;
+}
+.nb-bg-blue {
+  background-color: blue;
+}
+.nb-bg-green {
+  background-color: green;
+}
+.nb-bg-yellow {
+  background-color: yellow;
+}
+.nb-bg-orange {
+  background-color: orange;
+}
+.nb-bg-red {
+  background-color: red;
+}
+.nb-bg-maroon {
+  background-color: maroon;
+}
+
+.nb-sw-2 {
+  width: 12.5%;
+}
+
+.nb-div-inline {
+  /*display: inline-block;*/
+}
+
+#myGoogleMap {
+  width: 100%;  
+  height: 400px;
+  background-color: grey;
+}
+
+.std-table thead {
+  background: green;
+  color: white;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/*
+ * Standard table
+ */
+
+.nb-std-table {
+  width: 100%;
+  /*background-color: #005A5A;*/
+}
+.nb-std-table thead th {
+  padding: 10px;
+  text-align: left;
+}
+.nb-std-table thead th:nth-child(1) {
+  width: 50%;
+}
+.nb-std-table thead th:nth-child(2) {
+  width: 50%;
+}
+.nb-std-table thead th:nth-child(3) {
+}
+.nb-std-table tbody tr {
+  padding: 10px;
+}
+.nb-std-table tbody tr td{
+  padding: 10px;
+}
+.nb-std-table tbody tr:nth-child(odd) {
+}
+.nb-std-table tbody tr:nth-child(even) {
+}
+
+.nb-div-w100 {
+  width: 100%;
+}
+
+.nb-std-h3 {
+  padding: 10px;
+  margin-bottom: 0;
 }

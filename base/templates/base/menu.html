@@ -1,0 +1,33 @@
+{% extends "base/base_generic.html" %}
+
+{% block navMen %}
+  class="active" 
+{% endblock %}
+
+{% block content%}
+<div class="container nb-fg-white nb-bg-maroon nb-div-w100">
+  <hr/>
+  <h2 class="text-center">Navrang Hotel Menu</h2>
+  <hr/>
+  {% for menu_category in menu_categories %}
+    <h3 class="nb-std-h3">{{ menu_category.title }} </h3>
+    <table class="nb-std-table">
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for menu_item in menu_category.menuitem_set.all %}
+          <tr>
+            <td>{{ menu_item.name }}</td>
+            <td>{{ menu_item.price }}</td>
+          </tr>
+        {% endfor %}
+      <tbody>
+    </table>
+  {% endfor %}
+</div>
+{% endblock%}
+
