@@ -33,7 +33,7 @@ main {
 }
 
 .nb-fg-white {
-  color: white;
+  color: white !important;
 }
 
 .nb-std-link {
@@ -171,4 +171,7 @@ main {
 .nb-std-h3 {
   padding: 10px;
   margin-bottom: 0;
+}
+.nb-mw-80pc {
+    max-width: 50%;
 }
