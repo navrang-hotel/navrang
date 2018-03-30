@@ -201,3 +201,6 @@ main {
 .nb-pd-zero {
   padding: 0;
 }
+.nb-bb-strp {
+  border-bottom: 1px dashed gray;
+}
