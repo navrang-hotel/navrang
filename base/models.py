@@ -66,12 +66,12 @@ class ContactMessage(models.Model):
     date_time = models.DateTimeField(default=datetime.now)
 
     STATUS = (
-        ('N', 'News',),
+        ('N', 'New',),
         ('P', 'Progress',),
         ('R', 'Replied',),
     )
 
-    status = models.CharField(max_length=1, choices=STATUS)
+    status = models.CharField(max_length=1, choices=STATUS, default='N')
 
     def __str__(self):
         """String representation of the model."""

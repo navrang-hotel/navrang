@@ -6,7 +6,8 @@
 
 {% block content %}
 <!-- Contact -->
-<div class="container bg-grey fg-white">
+<!-- <div class="container bg-grey fg-white"> -->
+<div class="container">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
@@ -16,22 +17,38 @@
       <p><span class="glyphicon glyphicon-envelope"></span> contact@navranghotel.com</p>
       <p><span class="glyphicon glyphicon-globe"></span> www.navranghotel.com</p>
     </div>
+    <!-- ContactMessageForm -->
     <div class="col-sm-7">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+      <form action="" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <div class="fieldWrapper">
+                {{ form.sender_name.errors }}
+                <label for="{{ form.sender_name.id_for_label }}">Name:</label>
+                {{ form.sender_name }}
+            </div>
+          </div>
+          <div class="col-sm-6 form-group">
+            <div class="fieldWrapper">
+                {{ form.sender_email.errors }}
+                <label for="{{ form.sender_email.id_for_label }}">Email:</label>
+                {{ form.sender_email }}
+            </div>
+          </div>
         </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        <div class="fieldWrapper">
+            {{ form.message.errors }}
+            <label for="{{ form.message.id_for_label }}">Message:</label>
+            {{ form.message }}
         </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
+        <input type="submit" value="Send" />
+      </form>
+      <br />
+      <br />
     </div>
+    <!-- /ContactMessageForm -->
   </div>
 
   <!--Another google map.-->
@@ -57,7 +74,7 @@
 <!-- Contact -->
 {% endblock %}
 
-  <!-- Add Google Maps -->
+  <!-- Old Add Google Maps -->
   <div id="googleMap" style="height:400px;width:100%;"></div>
     <script>
     function myMap() {
@@ -75,3 +92,18 @@
     -->
   </div> 
 
+<!-- Old form -->
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>

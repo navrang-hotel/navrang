@@ -6,7 +6,7 @@ from django.shortcuts import render
 # Added by developer after this
 # =============================
 
-from .models import MenuCategory, MenuItem, Review
+from .models import MenuCategory, MenuItem, Review, ContactMessage
 from django.views import generic
 from django.views.generic.edit import CreateView
 from django.urls import reverse
@@ -30,6 +30,23 @@ def contact(request):
     context = {}
 
     return render(request, template, context)
+
+class ContactMessageCreate(CreateView):
+    """View class for creating contact message."""
+
+    template_name = 'base/contact.html'
+    model = ContactMessage
+    fields = [
+        'sender_name',
+        'sender_email',
+        'message',
+    ]
+
+    def get_success_url(self):
+        """Override success url."""
+
+        return reverse('base-index')
+
 
 class ReviewListView(generic.ListView):
     """View class for review list."""
