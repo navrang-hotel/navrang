@@ -3,4 +3,5 @@ navrang_env
 navrang/__pycache__
 base/migrations
 base/__pycache__
+static
 
