@@ -17,6 +17,7 @@ urlpatterns = [
     path('order/', views.order, name='base-order'),
     path('contact/', views.contact, name='base-contact'),
     path('reviews/', views.ReviewListView.as_view(), name='base-reviews'),
+    path('reviews/create/', views.ReviewCreate.as_view(), name='base-reviews-create'),
     path('reservation/', views.reservation, name='base-reservation'),
 ]
 

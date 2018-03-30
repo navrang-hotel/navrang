@@ -1,0 +1,16 @@
+{% extends "base/base_generic.html" %}
+
+{% block content %}
+  <h2 class="nb-fg-white">Creating new review.</h2>
+  <hr />
+  <p class="nb-fg-white">
+Thank you for taking out your time to write a review of Navrang Hotel. We appreciate your comments and feedback.
+  </p>
+  <hr />
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Ok" />
+  </form>
+{% endblock %}
+

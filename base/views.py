@@ -8,6 +8,9 @@ from django.shortcuts import render
 
 from .models import MenuCategory, MenuItem, Review
 from django.views import generic
+from django.views.generic.edit import CreateView
+from django.urls import reverse
+
 
 from .forms import FoodSearchForm
 from django.http import HttpResponseRedirect
@@ -32,6 +35,19 @@ class ReviewListView(generic.ListView):
     """View class for review list."""
 
     model = Review
+
+class ReviewCreate(CreateView):
+    """View class for review create."""
+
+    template_name = 'base/review_create.html'
+    model = Review
+    fields = '__all__'
+
+    def get_success_url(self):
+        """Overwrite success url."""
+
+        return reverse('base-index')
+
 
 def reservation(request):
     """View function for reservation."""
