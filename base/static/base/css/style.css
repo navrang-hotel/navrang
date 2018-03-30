@@ -175,3 +175,29 @@ main {
 .nb-mw-80pc {
     max-width: 50%;
 }
+
+.nb-bdr-crv {
+  border-radius: 10px;
+}
+
+.nb-bdr-tcrv {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.nb-bgr-blkred-red {
+  background: linear-gradient(to bottom, #580000, maroon);
+}
+.nb-std-hdiv {
+  padding: 10px;
+}
+
+.nb-bb-lgray {
+  border-bottom: 1px solid #180000;
+}
+.nb-bx-shdw {
+    box-shadow: 0px 3px 3px #180000;
+}
+.nb-pd-zero {
+  padding: 0;
+}
