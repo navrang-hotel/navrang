@@ -124,3 +124,5 @@ STATIC_URL = '/static/'
 # Added by developer after this
 # So that collectstatic works
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+
