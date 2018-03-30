@@ -45,6 +45,7 @@ class Review(models.Model):
     reviewer_name = models.CharField(max_length=100)
     reviewer_email = models.EmailField(max_length=100)
     comment = models.TextField(max_length=500)
+    star_rating = models.IntegerField()
     date_time = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
@@ -52,4 +53,27 @@ class Review(models.Model):
 
         return self.reviewer_name
 
+# ===============
+# Contact Message
+# ===============
 
+class ContactMessage(models.Model):
+    """Class for contact message model."""
+
+    sender_name = models.CharField(max_length=100)
+    sender_email = models.EmailField(max_length=100)
+    message = models.TextField(max_length=500)
+    date_time = models.DateTimeField(default=datetime.now)
+
+    STATUS = (
+        ('N', 'News',),
+        ('P', 'Progress',),
+        ('R', 'Replied',),
+    )
+
+    status = models.CharField(max_length=1, choices=STATUS)
+
+    def __str__(self):
+        """String representation of the model."""
+
+        return self.sender_name
