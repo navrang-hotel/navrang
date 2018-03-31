@@ -6,8 +6,7 @@
 
 {% block content %}
 <!-- Contact -->
-<!-- <div class="container bg-grey fg-white"> -->
-<div class="container">
+<div class="container bg-grey fg-white">
   <h2 class="text-center">CONTACT</h2>
   <div class="row">
     <div class="col-sm-5">
@@ -26,32 +25,34 @@
           <div class="col-sm-6 form-group">
             <div class="fieldWrapper">
                 {{ form.sender_name.errors }}
-                <label for="{{ form.sender_name.id_for_label }}">Name:</label>
                 {{ form.sender_name }}
             </div>
           </div>
           <div class="col-sm-6 form-group">
             <div class="fieldWrapper">
                 {{ form.sender_email.errors }}
-                <label for="{{ form.sender_email.id_for_label }}">Email:</label>
                 {{ form.sender_email }}
             </div>
           </div>
         </div>
         <div class="fieldWrapper">
             {{ form.message.errors }}
-            <label for="{{ form.message.id_for_label }}">Message:</label>
             {{ form.message }}
         </div>
-        <input type="submit" value="Send" />
+        <div class="row nb-tm-10px">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
       </form>
-      <br />
-      <br />
     </div>
     <!-- /ContactMessageForm -->
   </div>
+</div>
+<!-- Contact -->
+{% endblock %}
 
-  <!--Another google map.-->
+  <!--Another little newer google map.-->
   <div class="container">
     <div id="myGoogleMap">
       <h3>Map</h3>
@@ -70,9 +71,8 @@
   <script async defer 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4h1pk9PMPO128nhXyQRHK2rUF8ekzhFs&callback=initMap">
   </script>
+  <!--/Another little newer google map.-->
 
-<!-- Contact -->
-{% endblock %}
 
   <!-- Old Add Google Maps -->
   <div id="googleMap" style="height:400px;width:100%;"></div>

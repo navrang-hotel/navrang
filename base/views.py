@@ -12,7 +12,7 @@ from django.views.generic.edit import CreateView
 from django.urls import reverse
 
 
-from .forms import FoodSearchForm
+from .forms import FoodSearchForm, ContactMessageForm
 from django.http import HttpResponseRedirect
 
 def index(request):
@@ -36,11 +36,12 @@ class ContactMessageCreate(CreateView):
 
     template_name = 'base/contact.html'
     model = ContactMessage
-    fields = [
-        'sender_name',
-        'sender_email',
-        'message',
-    ]
+    # fields = [
+    #     'sender_name',
+    #     'sender_email',
+    #     'message',
+    # ]
+    form_class = ContactMessageForm
 
     def get_success_url(self):
         """Override success url."""

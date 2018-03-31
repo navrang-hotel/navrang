@@ -12,17 +12,12 @@
   {% for menu_category in menu_categories %}
     <h3 class="nb-std-h3">{{ menu_category.title }} </h3>
     <table class="nb-std-table">
-      <thead>
-        <tr>
-          <th>&nbsp;</th>
-          <th>&nbsp;</th>
-        </tr>
-      </thead>
       <tbody>
         {% for menu_item in menu_category.menuitem_set.all %}
           <tr class="nb-bb-strp">
             <td>{{ menu_item.name }}</td>
-            <td>{{ menu_item.price }}</td>
+            <td class="nb-ta-rt">{{ menu_item.price }}</td>
+            <td class="nb-ta-rt"><button class="btn btn-info">Order</button></td>
           </tr>
         {% endfor %}
       <tbody>
