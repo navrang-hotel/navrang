@@ -109,7 +109,7 @@ main {
   background-color: red;
 }
 .nb-bg-maroon {
-  background-color: maroon;
+  background-color: #A52A2A;
 }
 
 .nb-sw-2 {
@@ -154,7 +154,7 @@ main {
 .nb-std-table thead th:nth-child(3) {
 }
 .nb-std-table tbody tr {
-  padding: 10px;
+  /*padding: 10px;*/
 }
 .nb-std-table tbody tr td{
   padding: 10px;
@@ -162,6 +162,7 @@ main {
 .nb-std-table tbody tr:nth-child(odd) {
 }
 .nb-std-table tbody tr:nth-child(even) {
+  background-color: #A02020;
 }
 
 .nb-div-w100 {
@@ -186,7 +187,7 @@ main {
 }
 
 .nb-bgr-blkred-red {
-  background: linear-gradient(to bottom, #580000, maroon);
+  background: linear-gradient(to bottom, #902020, #A02020);
 }
 .nb-std-hdiv {
   padding: 10px;

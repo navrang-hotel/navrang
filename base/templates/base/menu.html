@@ -14,10 +14,10 @@
     <table class="nb-std-table">
       <tbody>
         {% for menu_item in menu_category.menuitem_set.all %}
-          <tr class="nb-bb-strp">
+          <tr class="">
             <td>{{ menu_item.name }}</td>
             <td class="nb-ta-rt">{{ menu_item.price }}</td>
-            <td class="nb-ta-rt"><button class="btn btn-info">Order</button></td>
+            <!--<td class="nb-ta-rt"><button class="btn btn-info">Order</button></td>-->
           </tr>
         {% endfor %}
       <tbody>
