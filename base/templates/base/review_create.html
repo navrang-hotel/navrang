@@ -5,16 +5,58 @@
 {% endblock %}
 
 {% block content %}
-  <h2 class="nb-fg-white">Creating new review.</h2>
-  <hr />
-  <p class="nb-fg-white">
-Thank you for taking out your time to write a review of Navrang Hotel. We appreciate your comments and feedback.
-  </p>
-  <hr />
+  <h2 class="nb-fg-white text-center">Creating new review.</h2>
+  <br />
+  <br />
+  <div class="row nb-fg-white">
+    <div class="col-sm-5">
+      <h4>
+Thank you for taking out your time to write a review of Navrang Hotel.
+        <br/>
+        <br/>
+ We appreciate your comments and feedback.
+      </h4>
+    </div>
+    <!-- ReviewForm -->
+    <div class="col-sm-7">
+      <form action="" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <div class="fieldWrapper">
+                {{ form.reviewer_name.errors }}
+                {{ form.reviewer_name }}
+            </div>
+          </div>
+          <div class="col-sm-6 form-group">
+            <div class="fieldWrapper">
+                {{ form.reviewer_email.errors }}
+                {{ form.reviewer_email }}
+            </div>
+          </div>
+        </div>
+        <div class="fieldWrapper">
+            {{ form.comment.errors }}
+            {{ form.comment }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.star_rating.errors }}
+            {{ form.star_rating }}
+        </div>
+        <div class="row nb-tm-10px">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- /Review Form -->
+  </div>
+{% endblock %}
+
   <form action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Ok" />
   </form>
-{% endblock %}
-

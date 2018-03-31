@@ -12,7 +12,7 @@ from django.views.generic.edit import CreateView
 from django.urls import reverse
 
 
-from .forms import FoodSearchForm, ContactMessageForm
+from .forms import FoodSearchForm, ContactMessageForm, ReviewForm
 from django.http import HttpResponseRedirect
 
 def index(request):
@@ -66,7 +66,13 @@ class ReviewCreate(CreateView):
 
     template_name = 'base/review_create.html'
     model = Review
-    fields = '__all__'
+    # fields = [
+    #     'reviewer_name',
+    #     'reviewer_email',
+    #     'comment',
+    #     'star_rating',
+    # ]
+    form_class = ReviewForm
 
     def get_success_url(self):
         """Overwrite success url."""
