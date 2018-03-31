@@ -16,8 +16,10 @@ urlpatterns = [
     path('menu/', views.displayMenu, name='base-menu'),
     path('order/', views.order, name='base-order'),
     path('contact/', views.ContactMessageCreate.as_view(), name='base-contact'),
+    path('contact/success', views.contactMessageSuccess, name='base-contact-success'),
     path('reviews/', views.ReviewListView.as_view(), name='base-reviews'),
     path('reviews/create/', views.ReviewCreate.as_view(), name='base-reviews-create'),
+    path('contact/create/success', views.reviewSuccess, name='base-review-success'),
     path('reservation/', views.reservation, name='base-reservation'),
 ]
 

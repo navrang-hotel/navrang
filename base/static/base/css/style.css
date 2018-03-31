@@ -204,3 +204,16 @@ main {
 .nb-bb-strp {
   border-bottom: 1px dashed gray;
 }
+
+footer {
+}
+
+.nb-tb-gray {
+  border-top: 1px solid gray;
+}
+
+.nb-std-ftr {
+  border-top: 1px solid gray;
+  margin-top: 20px;
+  padding-top: 20px;
+}

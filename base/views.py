@@ -45,8 +45,15 @@ class ContactMessageCreate(CreateView):
     def get_success_url(self):
         """Override success url."""
 
-        return reverse('base-index')
+        return reverse('base-contact-success')
 
+def contactMessageSuccess(request):
+    """View function for contact message success."""
+
+    template = 'base/contact_success.html'
+    context = {}
+
+    return render(request, template, context)
 
 class ReviewListView(generic.ListView):
     """View class for review list."""
@@ -63,8 +70,15 @@ class ReviewCreate(CreateView):
     def get_success_url(self):
         """Overwrite success url."""
 
-        return reverse('base-index')
+        return reverse('base-review-success')
 
+def reviewSuccess(request):
+    """View function for review success."""
+
+    template = 'base/review_success.html'
+    context = {}
+
+    return render(request, template, context)
 
 def reservation(request):
     """View function for reservation."""
