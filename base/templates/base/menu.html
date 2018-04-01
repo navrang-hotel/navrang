@@ -7,8 +7,24 @@
 {% block content%}
 <div class="container nb-fg-white nb-bg-maroon nb-div-w100 nb-bdr-crv nb-pd-zero">
   <div class="nb-std-hdiv nb-bdr-tcrv nb-bb-dkmaroon">
-    <h2 class="text-center">Navrang Hotel Menu</h2>
+    <h2 class="text-center-rm">Navrang Hotel Menu</h2>
   </div>
+  {% for menu_category in menu_categories %}
+    <h3 class="nb-std-h3">{{ menu_category.title }} </h3>
+      {% for menu_item in menu_category.menuitem_set.all %}
+        <div class="row slideanim nb-bb-dkmaroon nb-std-mrgn">
+          <div class="col-sm-4">
+            <p>{{menu_item.name}}</p>
+          </div>
+          <div class="col-sm-8">
+            <p>{{ menu_item.price }}</p>
+          </div>
+        </div>
+      {% endfor %}
+  {% endfor %}
+</div>
+{% endblock%}
+
   {% for menu_category in menu_categories %}
     <h3 class="nb-std-h3">{{ menu_category.title }} </h3>
     <table class="nb-std-table">
@@ -23,6 +39,3 @@
       <tbody>
     </table>
   {% endfor %}
-</div>
-{% endblock%}
-

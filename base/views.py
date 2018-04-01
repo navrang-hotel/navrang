@@ -61,6 +61,7 @@ class ReviewListView(generic.ListView):
 
     model = Review
     ordering = ['-date_time']
+    paginate_by = 10
 
 class ReviewCreate(CreateView):
     """View class for review create."""

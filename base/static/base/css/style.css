@@ -59,7 +59,7 @@ main {
     z-index: 9999;
     border: 0;
     /*font-size: 12px !important;*/
-    line-height: 1.42857143 !important;
+    /*line-height: 1.42857143 !important;*/
     letter-spacing: 1px;
     border-radius: 0;
 }
@@ -253,5 +253,22 @@ footer {
 }
 .nb-fsz-1em {
   font-size: 0.8em;
+}
+
+/*
+ *  Font Awesome social icons
+ */
+
+.social .fa-facebook:hover {
+    color: #4060A5 !important;
+}
+.social .fa-twitter:hover {
+    color: #00ABE3;
+}
+.social .fa-google-plus:hover {
+    color: #e64522;
+}
+.social .fa-linkedin:hover {
+    color: #0094BC;
 }
 
