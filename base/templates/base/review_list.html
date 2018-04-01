@@ -7,28 +7,52 @@
 {% block content%}
   <!-- Reviews -->
   <div class="container nb-fg-white">
-    <h2>Reviews</h2>
-    <a href="{% url 'base-reviews-create' %}" class="nb-std-link">+ Add a review</a>
+    <div class="row slideanim nb-bb-dkmaroon nb-std-mrgn">
+      <div class="col-sm-4">
+        <h2>Customer Reviews</h2>
+      </div>
+      <div class="col-sm-8">
+          <a href="{% url 'base-reviews-create' %}" class="btn btn-success nb-tm-15px">Add a review</a>
+      </div>
+    </div>
     <br/><br/>
   </div>
-  <div class="container text-center nb-bg-maroon fg-white nb-bdr-crv">
+
+  <div class="container nb-bg-maroon fg-white nb-bdr-crv">
     {% for review in review_list %}
-    <div class="row slideanim">
+    <div class="row slideanim nb-bb-dkmaroon nb-std-mrgn">
       <div class="col-sm-4">
-        <span class="glyphicon glyphicon-leaf logo-small"></span>
         <p>{{review.reviewer_name}}</p>
         <p>{{review.date_time}}</p>
       </div>
       <div class="col-sm-8">
-        <span class="glyphicon glyphicon-certificate logo-small"></span>
+        {% if review.star_rating == 1 %}
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+        {% elif review.star_rating == 2 %}
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+        {% elif review.star_rating == 3 %}
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+        {% elif review.star_rating == 4 %}
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+        {% elif review.star_rating == 5 %}
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
+        {% endif %}
         <p>{{review.comment}}</p>
       </div>
     </div>
-    <hr/>
     {% endfor %}
   </div>
   <br/><br/>
-
   <!-- /Reviews -->
 {% endblock%}
 

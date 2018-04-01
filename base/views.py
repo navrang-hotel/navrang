@@ -60,6 +60,7 @@ class ReviewListView(generic.ListView):
     """View class for review list."""
 
     model = Review
+    ordering = ['-date_time']
 
 class ReviewCreate(CreateView):
     """View class for review create."""

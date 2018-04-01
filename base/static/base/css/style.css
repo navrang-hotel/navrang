@@ -194,7 +194,13 @@ main {
 }
 
 .nb-bb-lgray {
-  border-bottom: 1px solid #180000;
+  border-bottom: 1px solid #AAAAAA;
+}
+.nb-bb-dkmaroon {
+  border-bottom: 1px solid #A00000;
+
+  /*background-color: white;*/
+  /*color: black;*/
 }
 .nb-bx-shdw {
     box-shadow: 0px 3px 3px #180000;
@@ -224,4 +230,14 @@ footer {
 
 .nb-tm-10px {
   margin-top: 10px;
+}
+.nb-tm-15px {
+  margin-top: 18px;
+}
+.nb-std-mrgn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.nb-fg-yellow {
+  color: yellow;
 }
