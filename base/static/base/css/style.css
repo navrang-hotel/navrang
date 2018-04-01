@@ -162,7 +162,7 @@ main {
 .nb-std-table tbody tr:nth-child(odd) {
 }
 .nb-std-table tbody tr:nth-child(even) {
-  background-color: #A02020;
+  /*background-color: #A02020;*/
 }
 
 .nb-div-w100 {
