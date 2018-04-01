@@ -241,3 +241,17 @@ footer {
 .nb-fg-yellow {
   color: yellow;
 }
+
+.nb-bg-temp {
+  background-color: maroon;
+}
+.nb-fw-bold {
+  font-weight: bold;
+}
+.nb-fs-italic {
+  font-style: italic;
+}
+.nb-fsz-1em {
+  font-size: 0.8em;
+}
+

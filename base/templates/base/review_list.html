@@ -22,8 +22,8 @@
     {% for review in review_list %}
     <div class="row slideanim nb-bb-dkmaroon nb-std-mrgn">
       <div class="col-sm-4">
-        <p>{{review.reviewer_name}}</p>
-        <p>{{review.date_time}}</p>
+        <p class="nb-fw-bold">{{review.reviewer_name}}</p>
+        <p class="nb-fsz-1em">{{review.date_time}}</p>
       </div>
       <div class="col-sm-8">
         {% if review.star_rating == 1 %}
