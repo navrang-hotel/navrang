@@ -10,25 +10,24 @@
   <br />
   <div class="row nb-fg-white">
     <div class="col-sm-5">
-      <h4>
-Thank you for taking out your time to write a review of Navrang Hotel.
-        <br/>
-        <br/>
- We appreciate your comments and feedback.
-      </h4>
+      {% load static %}
+      <img src="{% static 'base/img/thank_you_1.png' %}" alt="Thank You" />
     </div>
     <!-- ReviewForm -->
     <div class="col-sm-7">
       <form action="" method="post">
         {% csrf_token %}
         {{ form.non_field_errors }}
+        <!-- Name and email -->
         <div class="row">
+          <!-- Name -->
           <div class="col-sm-6 form-group">
             <div class="fieldWrapper">
                 {{ form.reviewer_name.errors }}
                 {{ form.reviewer_name }}
             </div>
           </div>
+          <!-- Email -->
           <div class="col-sm-6 form-group">
             <div class="fieldWrapper">
                 {{ form.reviewer_email.errors }}
@@ -36,14 +35,26 @@ Thank you for taking out your time to write a review of Navrang Hotel.
             </div>
           </div>
         </div>
+        <!-- Rating -->
+        <div class="fieldWrapper nb-dsp-hdn">
+            {{ form.star_rating.errors }}
+            {{ form.star_rating }}
+        </div>
+        <!-- Stars for difficulty_rating -->
+        <div>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-1"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-2"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-3"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-4"></span>
+            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-5"></span>
+        </div>
+        <br />
+        <!-- Comment -->
         <div class="fieldWrapper">
             {{ form.comment.errors }}
             {{ form.comment }}
         </div>
-        <div class="fieldWrapper">
-            {{ form.star_rating.errors }}
-            {{ form.star_rating }}
-        </div>
+        <!-- Submit button -->
         <div class="row nb-tm-10px">
           <div class="col-sm-12 form-group">
             <button class="btn btn-default pull-right" type="submit">Send</button>
@@ -53,10 +64,64 @@ Thank you for taking out your time to write a review of Navrang Hotel.
     </div>
     <!-- /Review Form -->
   </div>
+
+  <!-- Script for star rating -->
+  <script>
+      /* Star field */
+      var star_field = document.getElementById("srating");
+
+      /* Stars */
+      var star_1 = document.getElementById('star-rating-1');
+      var star_2 = document.getElementById('star-rating-2');
+      var star_3 = document.getElementById('star-rating-3');
+      var star_4 = document.getElementById('star-rating-4');
+      var star_5 = document.getElementById('star-rating-5');
+  
+      /* Change value when star_1 clicked */
+      star_1.onclick = function() {
+          star_field.value='1';
+          star_1.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_2.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+          star_3.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+          star_4.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+          star_5.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+      }
+      /* Change value when star_2 clicked */
+      star_2.onclick = function() {
+          star_field.value='2';
+          star_1.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_2.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_3.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+          star_4.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+          star_5.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+      }
+      /* Change value when star_3 clicked */
+      star_3.onclick = function() {
+          star_field.value='3';
+          star_1.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_2.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_3.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_4.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+          star_5.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+      }
+      /* Change value when star_4 clicked */
+      star_4.onclick = function() {
+          star_field.value='4';
+          star_1.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_2.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_3.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_4.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_5.className = "glyphicon glyphicon-star logo-small nb-fg-white";
+      }
+      /* Change value when star_5 clicked */
+      star_5.onclick = function() {
+          star_field.value='5';
+          star_1.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_2.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_3.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_4.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+          star_5.className = "glyphicon glyphicon-star logo-small nb-fg-yellow";
+      }
+  </script>
 {% endblock %}
 
-  <form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Ok" />
-  </form>
