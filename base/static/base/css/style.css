@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: brown;
+  background-color: #DDD;
 }
 
 main {
@@ -33,7 +33,7 @@ main {
 }
 
 .nb-fg-white {
-  color: white !important;
+  color: black !important;
 }
 
 .nb-std-link {
@@ -276,3 +276,44 @@ footer {
   display: none;
 }
 
+.nb-bg-brgn {
+  background-color: #8D8741;
+  background-color: #0C0032;
+  background-color: #1F2833;
+  background-color: #18121E;
+  background-color: #DF744A;
+  background-color: #94618E;
+  background-color: #49274A;
+  background-color: #4484CE;
+  background-color: #BD734E;
+  background-color: #57BC90;
+  background-color: #1A0315;
+  background-color: #626C60;
+  background-color: #373f27;
+  background-color: #636b46;
+  background-color: #6e7376;
+  background-color: #FF6A5C;
+  background-color: #57652a;
+  background-color: #08302f;
+  background-color: #c06014;
+}
+.nb-std-pdg {
+  padding: 3px;
+}
+.nb-std-cat {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #EEE;
+}
+.nb-lrm-0px {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nb-pdg-0px {
+  padding: 0;
+}
+.nb-tbr-5px {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
