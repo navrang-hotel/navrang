@@ -18,7 +18,7 @@
     <br/><br/>
   </div>
 
-  <div class="container nb-bg-maroon fg-white nb-bdr-crv">
+  <div class="container nb-bg-maroon-rm fg-white-rm nb-bdr-crv">
     {% for review in review_list %}
     <div class="row slideanim nb-bb-dkmaroon nb-std-mrgn">
       <div class="col-sm-4">
@@ -61,13 +61,13 @@
         <div class="pagination">
             <span class="page-links">
                 {% if page_obj.has_previous %}
-                    <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}" class="btn btn-danger">Previous</a>
+                    <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}" class="btn btn-info">Previous</a>
                 {% endif %}
                 <span class="page-current nb-fg-white">
                     Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
                 </span>
                 {% if page_obj.has_next %}
-                    <a href="{{ request.path }}?page={{ page_obj.next_page_number }}" class="btn btn-danger">Next</a>
+                    <a href="{{ request.path }}?page={{ page_obj.next_page_number }}" class="btn btn-info">Next</a>
                 {% endif %}
             </span>
         </div>
