@@ -11,16 +11,15 @@
     <h2 class="text-center-rm">Navrang Hotel Menu</h2>
   </div>
   {% for menu_category in menu_categories %}
-    <br/>
-    <h3 class="nb-std-h3-rm">{{ menu_category.title }} </h3>
-    <br/>
+    <h3 class="nb-std-h3-rm nb-bm-10px">{{ menu_category.title }} </h3>
       {% for menu_item in menu_category.menuitem_set.all %}
         <div class="row slideanim nb-bb-dkmaroon nb-std-mrgn">
           <div class="col-sm-4">
             <p>{{menu_item.name}}</p>
+            <p class="nb-fg-gray">{{menu_item.description}}</p>
           </div>
           <div class="col-sm-8">
-            <p>{{ menu_item.price }}</p>
+            <p>&#8377; {{ menu_item.price }}</p>
           </div>
         </div>
       {% endfor %}
