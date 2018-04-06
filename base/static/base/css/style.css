@@ -52,34 +52,6 @@ main {
  * Navbar
  */
 
-.navbar {
-    /*margin-bottom: 0;*/
-    /*background-color: #079;*/
-    background-color: #000;
-    z-index: 9999;
-    border: 0;
-    /*font-size: 12px !important;*/
-    /*line-height: 1.42857143 !important;*/
-    letter-spacing: 1px;
-    border-radius: 0;
-}
-.navbar li a, .navbar .navbar-brand {
-    color: #fff !important;
-}
-.navbar-nav li.active a {
-    /*color: #079 !important;*/
-    /*background-color: #068 !important;*/
-    background-color: brown !important;
-}
-.navbar-nav li a:hover {
-    /*color: #079 !important;*/
-    /*background-color: #068 !important;*/
-    background-color: maroon !important;
-}
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-    color: #fff !important;
-}
 
 .nb-bdr-shd {
   text-shadow: 5px 0px 2px #000, -5px 0px 2px #000,
@@ -316,4 +288,15 @@ footer {
 .nb-tbr-5px {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+.nb-std-ftr {
+  background-color: #888;
+  padding-bottom: 20px;
+}
+.nb-ul-nb {
+  list-style: none;
+}
+.nb-ul-fgw a {
+  color: #333;
 }
