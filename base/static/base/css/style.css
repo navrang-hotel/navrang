@@ -33,7 +33,7 @@ main {
 }
 
 .nb-fg-white {
-  color: black !important;
+  color: #CCC;
 }
 
 .nb-std-link {
@@ -192,7 +192,9 @@ footer {
 }
 
 .nb-std-ftr {
-  border-top: 1px solid gray;
+  background-color: #333;
+  padding-bottom: 20px;
+  border-top: 1px solid #555555;
   margin-top: 20px;
   padding-top: 20px;
 }
@@ -290,15 +292,14 @@ footer {
   border-top-right-radius: 5px;
 }
 
-.nb-std-ftr {
-  background-color: #888;
-  padding-bottom: 20px;
-}
 .nb-ul-nb {
   list-style: none;
 }
-.nb-ul-fgw a {
-  color: #333;
+.nb-fg-gray a {
+  color: #CCC;
+}
+footer a {
+  color: #CCC;
 }
 
 /* To Make columns of same height */
@@ -342,3 +343,22 @@ footer {
     color: #fff !important;
 }
 */
+.nb-bg-green {
+  background-color: green;
+}
+
+.nb-bm-0px {
+  margin-bottom: 0px;
+}
+.nb-lrpdg-0px {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nb-bg-lgray {
+  background-color: #CCCCCC;
+}
+
+.nb-std-crvbdr {
+  border-radius: 5px;
+}

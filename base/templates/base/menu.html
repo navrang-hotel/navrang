@@ -6,9 +6,12 @@
 
 {% block content%}
 <!--  Old Menu style -->
-<div class="container nb-fg-white-rm nb-bg-maroon-rm nb-div-w100 nb-bdr-crv nb-pd-zero">
+<div class="container nb-fg-white-rm nb-bg-maroon-rm nb-bdr-crv ">
   <div class="nb-std-hdiv nb-bdr-tcrv nb-bb-dkmaroon">
-    <h2 class="text-center-rm">Navrang Hotel Menu</h2>
+    <h2 class="text-center">Navrang Hotel Menu</h2>
+    <p class="nb-fg-gray">
+Navrang Hotel has been in business since 1980. We are a local, family-owned and operated restaurant. We offer a wide variety of quality thali, sweets, salads, wraps, steaks, pasta, and crunch rice bowls.
+    </p>
   </div>
   {% for menu_category in menu_categories %}
     <h3 class="nb-std-h3-rm nb-bm-10px">{{ menu_category.title }} </h3>

@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Navrang Hotel, Janakpur</title>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Good resturant in Janakpur, Nepal. One of the oldest in Janakpur.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- /meta -->
+
+    <title>Navrang Hotel, Janakpur</title>
+
+    <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- /Bootstrap 3 -->
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- /Font awesome -->
+
+    <!-- Local style sheet -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+    <!-- /Local style sheet -->
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse nb-bm-0px">
           <div class="container">
             <!-- Menu Header? -->
             <div class="navbar-header">
@@ -22,7 +35,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
               </button>
-              <a class="navbar-brand" href="{% url 'base-index' %}">Navrang</a>
+              <a class="navbar-brand" href="{% url 'base-index' %}">Navrang Hotel</a>
             </div>
             <!-- Menu Items -->
             <div class="collapse navbar-collapse" id="myNavbar">
@@ -46,46 +59,34 @@
                 <li {% block navCon %}{% endblock %}><a href="{% url 'base-contact' %}">Contact</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
-                <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
                 {% load static %}
                 <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-lg fa-google-plus"></i></a></li>
                 <li><a href="#"><i class="fa fa-lg fa-youtube"></i></a></li>
-                <li><button class="btn btn-info navbar-btn"><span class="glyphicon glyphicon-phone"></span> Call: +977 9801185187</button></li>
+                <li><button class="btn btn-success navbar-btn nb-bg-maroon"><span class="glyphicon glyphicon-phone"></span> Call: +977 9801185187</button></li>
               </ul>
             </div>
           </div>
         </nav>
     </header>
 
-    <main>
-      <div class="container">
+    <main class="nb-bg-green-rm">
+      <div class="container-fluid nb-bg-green-rm nb-lrpdg-0px">
         {% block content %}
         {% endblock %}
       </div>
     </main>
 
     <footer>
-      <div class="container-fluid nb-std-ftr nb-std-ftr">
+      <div class="container-fluid nb-std-ftr">
         <div class="container">
-          <div class="row">
+          <div class="row nb-fg-white">
             <div class="col-sm-4 nb-pdg-0px">
               <p>&copy; 2018 Navrang Hotel</p>
               <p>Serving Janakpur Area since 1960</p>
             </div>
-            <div class="col-sm-4 nb-pdg-0px">
-              <ul class="nb-ul-nb nb-ul-fgw">
-                <li><a href="">Home</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">Order</a></li>
-                <li><a href="">Reservations</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Careers</a></li>
-              </ul>
-            </div>
-            <div class="col-sm-4 nb-pdg-0px">
+            <div class="col-sm-8 nb-pdg-0px">
               <ul class="nb-ul-nb nb-ul-fgw list-inline">
                 {% load static %}
                 <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
