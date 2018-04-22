@@ -1,0 +1,23 @@
+{% extends "base/base_generic.html" %}
+
+{% block navOff %}
+  class="active" 
+{% endblock %}
+
+{% block content%}
+  <!-- Offers -->
+  <div class="container nb-bb-dkmaroon">
+        <br />
+        <h2 class="text-center">Offers</h2>
+  </div>
+  {% for offer in offer_list %}
+    <div class="container nb-bb-dkmaroon nb-std-mrgn">
+      <h4>{{offer.offer_name}}</h4>
+      <p class="nb-fg-gray">{{offer.description}}</p>
+    </div>
+  {% endfor %}
+  </div>
+{% endblock%}
+
+      {% for offer in offer_list %}
+      {% endfor %}

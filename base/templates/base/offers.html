@@ -1,0 +1,35 @@
+{% extends "base/base_generic.html" %}
+
+{% block navOff %}
+  class="active" 
+{% endblock %}
+
+{% block content%}
+<div class="container nb-fg-white-rm">
+  {% load static %}
+  <!--
+  <div>
+    <img src="{% static 'base/img/phone.png' %}" alt="Order by Phone" />
+    <h2>Order by Phone: +977 9801185187</h2>
+  </div>
+  <hr/>
+  -->
+      <br/>
+      <h2 class="text-center">Offers</h2>
+      <hr />
+  <!--
+  <hr/>
+  <h3>Online order coming soon...</h3>
+  -->
+
+{% endblock%}
+
+  <div>
+    <h2 class="text-center">What do you want to eat?</h2>
+    <form action="" method="POST" class="">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>

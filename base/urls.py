@@ -15,6 +15,7 @@ urlpatterns = [
     path('', views.index, name='base-index'),
     path('menu/', views.displayMenu, name='base-menu'),
     path('order/', views.order, name='base-order'),
+    path('offers/', views.OfferListView.as_view(), name='base-offers'),
     path('contact/', views.ContactMessageCreate.as_view(), name='base-contact'),
     path('contact/success', views.contactMessageSuccess, name='base-contact-success'),
     path('reviews/', views.ReviewListView.as_view(), name='base-reviews'),

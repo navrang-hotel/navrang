@@ -6,7 +6,7 @@ from django.shortcuts import render
 # Added by developer after this
 # =============================
 
-from .models import MenuCategory, MenuItem, Review, ContactMessage
+from .models import MenuCategory, MenuItem, Review, ContactMessage, Offer
 from django.views import generic
 from django.views.generic.edit import CreateView
 from django.urls import reverse
@@ -130,4 +130,17 @@ def order(request):
     }
 
     return render(request, template, context) 
+
+def offers(request):
+    """View function for offers page (*not* used right now)."""
+
+    template = 'base/offers.html'
+    context = {}
+
+    return render(request, template, context) 
+
+class OfferListView(generic.ListView):
+    """View class for offers page."""
+
+    model = Offer
 

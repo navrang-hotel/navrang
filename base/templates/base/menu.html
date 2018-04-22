@@ -10,7 +10,9 @@
   <div class="nb-std-hdiv nb-bdr-tcrv nb-bb-dkmaroon">
     <h2 class="text-center">Navrang Hotel Menu</h2>
     <p class="nb-fg-gray text-center">
-Navrang Hotel has been in business since 1980. We are a local, family-owned and operated restaurant.</div>
+Navrang Hotel has been in business since 1980. We are a local, family-owned and operated restaurant.
+    </p>
+  </div>
   {% for menu_category in menu_categories %}
     <h3 class="nb-std-h3-rm nb-bm-10px">{{ menu_category.title }} </h3>
       {% for menu_item in menu_category.menuitem_set.all %}

@@ -77,3 +77,22 @@ class ContactMessage(models.Model):
         """String representation of the model."""
 
         return self.sender_name
+
+# ======
+# Offer
+# ======
+
+class Offer(models.Model):
+    """Class for offer model."""
+
+    offer_name = models.CharField(max_length=200)
+    description = models.TextField(max_length=500)
+    create_date_time = models.DateTimeField(default=datetime.now)
+    start_date = models.DateField()
+    end_date = models.DateField()
+
+    def __str__(self):
+        """String representation of the model."""
+
+        return self.offer_name
+
