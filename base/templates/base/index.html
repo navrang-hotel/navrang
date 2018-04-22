@@ -15,21 +15,21 @@
         {% load static %}
         <img src="{% static 'base/img/food_item_2_new.jpeg' %}" alt="Paris" width="400" height="300">
         <p><strong>Thali</strong></p>
-        <p>Best Thali in town. <a href="">View all</a></p>
+        <p>Best Thali in town. <a href="{% url 'base-menu' %}">View all</a></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="{% static 'base/img/food_item_2_new.jpeg' %}" alt="New York" width="400" height="300">
         <p><strong>Sweets</strong></p>
-        <p>Best Sweets in town. <a href="">View all</a></p>
+        <p>Best Sweets in town. <a href="{% url 'base-menu' %}">View all</a></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="{% static 'base/img/food_item_3_new.jpg' %}" alt="San Francisco" width="400" height="300">
         <p><strong>Juice</strong></p>
-        <p>Best Juice in town. <a href="">View all</a></p>
+        <p>Best Juice in town. <a href="{% url 'base-menu' %}">View all</a></p>
       </div>
     </div>
   </div>
@@ -59,7 +59,7 @@ We serve one of the best foods in Janakpur.
       <p class="nb-fg-white text-center">
         {% load static %}
         <!--<img src="{% static 'base/img/food_pic_1.jpg' %}" alt="Food Pic" />-->
-        <a class="btn btn-success">View foods</a>
+        <a class="btn btn-success" href="{% url 'base-menu' %}">View foods</a>
       </p>
     </div>
     <div class="col-sm-4 nb-std-cat-rm nb-pdg-0px">
@@ -70,7 +70,7 @@ We serve one of the best foods in Janakpur.
 You can order by phone or visit us.
       </p>
       <p class="nb-fg-white text-center">
-        <a class="btn btn-success">Order</a>
+        <a class="btn btn-success" href="{% url 'base-order' %}">Order</a>
       </p>
     </div>
     <div class="col-sm-4 nb-std-cat-rm nb-pdg-0px">
