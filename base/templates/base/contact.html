@@ -25,25 +25,25 @@
         {{ form.non_field_errors }}
         <div class="row">
           <div class="col-sm-6 form-group">
-            <div class="fieldWrapper">
                 {{ form.sender_name.errors }}
                 {{ form.sender_name }}
-            </div>
           </div>
           <div class="col-sm-6 form-group">
-            <div class="fieldWrapper">
                 {{ form.sender_email.errors }}
                 {{ form.sender_email }}
-            </div>
           </div>
         </div>
-        <div class="fieldWrapper">
-            {{ form.message.errors }}
-            {{ form.message }}
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <div class="fieldWrapper">
+                {{ form.message.errors }}
+                {{ form.message }}
+            </div>
+          </div>
         </div>
         <div class="row nb-tm-10px">
           <div class="col-sm-12 form-group">
-            <button class="btn btn-default pull-right" type="submit">Send</button>
+            <button class="btn btn-default pull-right" type="submit">Submit</button>
           </div>
         </div>
       </form>

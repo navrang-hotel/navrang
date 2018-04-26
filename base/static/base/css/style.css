@@ -33,7 +33,7 @@ main {
 }
 
 .nb-fg-white {
-  color: #CCC;
+  color: #FFF;
 }
 
 .nb-std-link {
@@ -206,7 +206,7 @@ footer {
   margin-top: 10px;
 }
 .nb-tm-15px {
-  margin-top: 18px;
+  margin-top: 22px;
 }
 .nb-std-mrgn {
   margin-top: 10px;
@@ -303,14 +303,16 @@ footer a {
 }
 
 /* To Make columns of same height */
-.row [class*="col-"]{
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
-}
 
-.row{
-  overflow: hidden; 
-}
+/* .row [class*="col-"]{ */
+/*   margin-bottom: -99999px; */
+/*   padding-bottom: 99999px; */
+/* } */
+/*  */
+/* .row{ */
+/*   overflow: hidden;  */
+/* } */
+
 .nb-fg-gray {
   color: gray;
 }

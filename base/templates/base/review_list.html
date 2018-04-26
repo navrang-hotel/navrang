@@ -12,7 +12,7 @@
         <h2>Customer Reviews</h2>
       </div>
       <div class="col-sm-8">
-          <a href="{% url 'base-reviews-create' %}" class="btn btn-success nb-tm-15px">Add a review</a>
+          <a href="{% url 'base-reviews-create' %}" class="btn nb-tm-15px">Add a review</a>
       </div>
     </div>
     <br/><br/>
@@ -21,11 +21,11 @@
   <div class="container nb-bg-maroon-rm fg-white-rm nb-bdr-crv">
     {% for review in review_list %}
     <div class="row slideanim nb-bb-dkmaroon nb-std-mrgn">
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <p class="nb-fw-bold">{{review.reviewer_name}}</p>
         <p class="nb-fsz-1em">{{review.date_time}}</p>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-9">
         {% if review.star_rating == 1 %}
             <span class="glyphicon glyphicon-star logo-small nb-fg-yellow"></span>
         {% elif review.star_rating == 2 %}
@@ -59,13 +59,13 @@
           <div class="pagination">
               <span class="page-links">
                   {% if page_obj.has_previous %}
-                      <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}" class="btn btn-info">Previous</a>
+                      <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}" class="">Previous</a>
                   {% endif %}
                   <span class="page-current nb-fg-white-rm">
-                      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
                   </span>
                   {% if page_obj.has_next %}
-                      <a href="{{ request.path }}?page={{ page_obj.next_page_number }}" class="btn btn-info">Next</a>
+                      <a href="{{ request.path }}?page={{ page_obj.next_page_number }}" class="">Next</a>
                   {% endif %}
               </span>
           </div>

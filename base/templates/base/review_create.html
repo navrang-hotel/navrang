@@ -5,67 +5,66 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-  <h2 class="nb-fg-white-rm text-center">Creating new review.</h2>
-  <br />
-  <br />
-  <div class="row nb-fg-white">
-    <div class="col-sm-5">
-      {% load static %}
-      <img src="{% static 'base/img/thank_you_1.png' %}" alt="Thank You" />
-    </div>
-    <!-- ReviewForm -->
-    <div class="col-sm-7">
-      <form action="" method="post">
-        {% csrf_token %}
-        {{ form.non_field_errors }}
-        <!-- Name and email -->
-        <div class="row">
-          <!-- Name -->
-          <div class="col-sm-6 form-group">
-            <div class="fieldWrapper">
-                {{ form.reviewer_name.errors }}
-                {{ form.reviewer_name }}
+  <div class="container">
+    <h2 class="nb-fg-white-rm text-center">Creating new review.</h2>
+    <br />
+    <br />
+    <div class="row nb-fg-white">
+      <div class="col-sm-4">
+        {% load static %}
+        <img src="{% static 'base/img/thank_you_1.png' %}" alt="Thank You" />
+      </div>
+      <!-- ReviewForm -->
+      <div class="col-sm-8">
+        <form action="" method="post">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+          <!-- Name and email -->
+          <div class="row">
+            <!-- Name -->
+            <div class="col-sm-6 form-group">
+              <div class="fieldWrapper">
+                  {{ form.reviewer_name.errors }}
+                  {{ form.reviewer_name }}
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="col-sm-6 form-group">
+              <div class="fieldWrapper">
+                  {{ form.reviewer_email.errors }}
+                  {{ form.reviewer_email }}
+              </div>
             </div>
           </div>
-          <!-- Email -->
-          <div class="col-sm-6 form-group">
-            <div class="fieldWrapper">
-                {{ form.reviewer_email.errors }}
-                {{ form.reviewer_email }}
+          <!-- Rating -->
+          <div class="fieldWrapper nb-dsp-hdn">
+              {{ form.star_rating.errors }}
+              {{ form.star_rating }}
+          </div>
+          <!-- Stars for difficulty_rating -->
+          <div class="nb-tm-10px-rm nb-bm-10px">
+              <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-1"></span>
+              <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-2"></span>
+              <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-3"></span>
+              <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-4"></span>
+              <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-5"></span>
+          </div>
+          <!-- Comment -->
+          <div class="fieldWrapper">
+              {{ form.comment.errors }}
+              {{ form.comment }}
+          </div>
+          <!-- Submit button -->
+          <div class="row nb-tm-10px">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" type="submit">Send</button>
             </div>
           </div>
-        </div>
-        <!-- Rating -->
-        <div class="fieldWrapper nb-dsp-hdn">
-            {{ form.star_rating.errors }}
-            {{ form.star_rating }}
-        </div>
-        <!-- Stars for difficulty_rating -->
-        <div>
-            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-1"></span>
-            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-2"></span>
-            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-3"></span>
-            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-4"></span>
-            <span class="glyphicon glyphicon-star logo-small nb-fg-white" id="star-rating-5"></span>
-        </div>
-        <br />
-        <!-- Comment -->
-        <div class="fieldWrapper">
-            {{ form.comment.errors }}
-            {{ form.comment }}
-        </div>
-        <!-- Submit button -->
-        <div class="row nb-tm-10px">
-          <div class="col-sm-12 form-group">
-            <button class="btn btn-default pull-right" type="submit">Send</button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
+      <!-- /Review Form -->
     </div>
-    <!-- /Review Form -->
   </div>
-</div>
 
   <!-- Script for star rating -->
   <script>
@@ -126,4 +125,7 @@
       }
   </script>
 {% endblock %}
+
+
+
 
